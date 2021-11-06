@@ -14,9 +14,10 @@ jobs:
         flutter-version: '2.0.5'
     - run: flutter pub get
     - run: flutter test
+    - run: flutter build apk --debug --split-per-abi
     - name: Upload Artifact
       continue-on-error: true
       uses: actions/upload-artifact@master
       with:
-        name: out.apk
+        name: out.zip
         path: build/app/outputs/apk/debug/*.apk
