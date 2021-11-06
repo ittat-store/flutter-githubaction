@@ -66,9 +66,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ), 
       bottomNavigationBar:BottomNavigationBar(
         items: [
-          BottomNavigationBarItem(icon: Icons.home, title: 'Home'),
-          BottomNavigationBarItem(icon: Icons.search, title: 'Search'),
-          BottomNavigationBarItem(icon: Icons.person, title: 'Profile'),
+          BottomNavigationBarItem(icon: Icon(Icons.home), title: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.search), title: 'Search'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), title: 'Profile'),
         ],
         currentIndex: 1,
         onTap: (index){
