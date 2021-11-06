@@ -26,6 +26,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  int _index = 0;
 
   void _incrementCounter() {
     setState(() {
@@ -50,6 +51,11 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.display1,
             ),
+            Text(
+              '$_index',
+              style: Theme.of(context).textTheme.display1,
+            ),
+            )
           ],
         ),
       ),
@@ -65,6 +71,12 @@ class _MyHomePageState extends State<MyHomePage> {
           bottomNavigationBarItem(icon: Icons.person, title: 'Profile'),
         ],
         currentIndex: 1,
+        onTap: (index){
+          // toast message index
+          print(index);
+          _index = index;
+
+        },
       ),
     );
   }
