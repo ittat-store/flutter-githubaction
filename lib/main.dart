@@ -67,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar:BottomNavigationBar(
         items: [
           bottomNavigationBarItem(icon: Icons.home, title: 'Home'),
-          bottomNavigationBarItemq(icon: Icons.search, title: 'Search'),
+          bottomNavigationBarItem(icon: Icons.search, title: 'Search'),
           bottomNavigationBarItem(icon: Icons.person, title: 'Profile'),
         ],
         currentIndex: 1,
