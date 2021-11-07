@@ -61,7 +61,7 @@ class WordOnlineAPI {
   Future<List<String>> getAllWord() async {
     var wordData = await _getWordList();
     List<String> wordList = wordData['list'];
-    print(wordList["total"] as Number);
+    print(wordList["total"] as int);
     return wordList;
   }
 
