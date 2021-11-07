@@ -59,8 +59,8 @@ class WordOnlineAPI {
   }
 
   Future<List<String>> getAllWord() async {
-    var wordList = await _getWordList();
-    List<String> wordList = wordList['list'];
+    var wordData = await _getWordList();
+    List<String> wordList = wordData['list'];
     print(wordList["total"]);
     return wordList;
   }
