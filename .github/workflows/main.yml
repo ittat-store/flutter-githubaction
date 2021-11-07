@@ -13,6 +13,7 @@ jobs:
         # flutter-version: '2.0.5'
         flutter-version: '1.7.8+hotfix.4'
     - run: flutter pub get
+    - run: flutter doctor
     # - run: flutter test
     - run: flutter build apk
     # - run: flutter build apk --target-platform android-arm,android-arm64 --split-per-abi
