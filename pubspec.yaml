@@ -1,5 +1,8 @@
 name: weather
 description: A new Flutter application.
+ 
+environment:
+  sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
   flutter:
