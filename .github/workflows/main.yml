@@ -17,14 +17,14 @@ jobs:
     # - run: flutter test
     - run: flutter build apk
     # - run: flutter build apk --target-platform android-arm,android-arm64 --split-per-abi
-    - run: ls -al build/app/outputs/*
-    - run: flutter build web
+    - run: tree build/app/outputs/apk
     - name: Upload Artifact
       continue-on-error: true
       uses: actions/upload-artifact@master
       with:
-        name: out.zip
-        path: build/app/outputs/apk/debug/*.apk
+        name: out.apk
+        path: build/app/outputs/app.apk
+    - run: flutter build web
 
   build:
     runs-on: macos-latest
