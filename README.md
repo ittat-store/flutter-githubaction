@@ -1,21 +1,16 @@
-# Weather
+# weather
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+A new Flutter project.
 
-## Quick Disclaimer
+## Getting Started
 
-I removed my private OpenWeather API key from the repo, if you want to get the weather forecast use your own in the `openweather_api.dart` file (more info at [https://openweathermap.org/appid](https://openweathermap.org/appid)).
+This project is a starting point for a Flutter application.
 
-## Back to the app
+A few resources to get you started if this is your first Flutter project:
 
-*I started from scatch with Flutter and Dart two weeks ago (2018/02/02), a refactoring is needed due to the ugliness of the current code since my main purpose is/was to learn them at first.*
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-The idea behind this weather application (currently only the login page) is to learn how to use Canvas and Animation in Flutter.
-
-It all started from an [inspirational mockup](https://dribbble.com/shots/2695917-Weather-Login-App) two days ago, and here's the *current* result:
-
-![test](./README/comparison.jpg)
-
-The background has been entirely coded (see [`header_painter.dart`](https://github.com/alessandroaime/Weather/blob/master/lib/header_painter.dart)) except for the deer image, which has been **temporarily** appended using the `Stack` widget rather than painting it.
-
-Enjoy it!
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
