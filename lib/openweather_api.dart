@@ -44,3 +44,28 @@ class OpenWeatherAPI {
     return dailyForecastList;
   }
 }
+
+class WordOnlineAPI {
+
+  final String baseurl = 'https://cdn.jsdelivr.net/gh/lyc8503/baicizhan-word-meaning-API/data';
+  final String list = '/list.json';
+
+  Future<Map<String, dynamic>> _getWordList() async {
+    var uri = new Uri.https(
+      baseurl,
+      list
+    );
+    return await makeHttpsRequest(uri);
+  }
+
+  Future<List<String>> getAllWord() async {
+    var wordList = await _getWordList();
+    List<String> wordList = wordList['list'];
+    print(wordList["total"]);
+    return wordList;
+  }
+
+  Future<String> getword(String word) async{
+    return '/words/${word}.json';
+  }
+}
