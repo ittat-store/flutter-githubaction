@@ -11,7 +11,6 @@ jobs:
     - uses: subosito/flutter-action@v1
       with:
         flutter-version: '2.0.5'
-        # flutter-version: '1.7.8+hotfix.4'
         # channel: 'dev' # 'stable' 'beta', 'dev' or 'master'
 
     - run: flutter pub get
@@ -28,7 +27,7 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: out.apk
-        path: build/app/outputs/apk/app.apk
+        path: build/app/outputs/flutter-apk/app-release.apk
     - run: flutter build web
 
   build:
