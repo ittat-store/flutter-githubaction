@@ -15,6 +15,7 @@ class _WeatherWidgetState extends State<WeatherWidget> {
   int _days = 14;
   List<DailyForecast> _weatherForecast;
   List<String> _weekdaysData;
+  List<String> _wordtotalList;
 
   @override
   void initState() {
@@ -119,6 +120,8 @@ class _WeatherWidgetState extends State<WeatherWidget> {
 
   _fetchData() async {
     var openWeatherAPI = new OpenWeatherAPI();
+    var wordOnlineAPI = new WordOnlineAPI();
+    var wordList = await wordOnlineAPI.getAllWord();
     var weekdaysData = getWeekdaysList(_days);
     // get location from GPS [lat, lon]
     var currentCoord = await getCoordinates();
@@ -137,6 +140,7 @@ class _WeatherWidgetState extends State<WeatherWidget> {
       _currentLocation = currentLocation;
       _currentTemperature = currentTemperature;
       _weatherForecast = weatherForecast;
+      _wordtotalList = wordList;
       _loading = false;
     });
   }
