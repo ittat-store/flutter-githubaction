@@ -1,51 +1,21 @@
+# Weather
 
-# Flutter Weather
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
- <img alt="Awesome Flutter" src="https://img.shields.io/badge/Awesome-Flutter-blue.svg?longCache=true&style=flat-square" />
-A Flutter application to view current weather status.
+## Quick Disclaimer
 
-- ## Download The App From [Here](https://bit.ly/2JJZdAV)
+I removed my private OpenWeather API key from the repo, if you want to get the weather forecast use your own in the `openweather_api.dart` file (more info at [https://openweathermap.org/appid](https://openweathermap.org/appid)).
 
+## Back to the app
 
+*I started from scatch with Flutter and Dart two weeks ago (2018/02/02), a refactoring is needed due to the ugliness of the current code since my main purpose is/was to learn them at first.*
 
-![android](./screenshots/android.png?raw=true 'android')
-![ios](./screenshots/ios.gif?raw=true 'ios')
-![ios](./screenshots/ios_chart.gif?raw=true 'ios')
+The idea behind this weather application (currently only the login page) is to learn how to use Canvas and Animation in Flutter.
 
-## Features
-- :white_check_mark: Beautiful minimal UI
-- :white_check_mark: Dark and Light themes
-- :white_check_mark: Current temperature, max and min temperature, sunset, sunrise
-- :white_check_mark: Custom icons for each weather condition
-- :white_check_mark: 5 day forecast
-- :white_check_mark: Beautifully animated transitions
-- :white_check_mark: BLoC pattern for API calls
-- :white_check_mark: Line graph to show temperature variance
+It all started from an [inspirational mockup](https://dribbble.com/shots/2695917-Weather-Login-App) two days ago, and here's the *current* result:
 
-## Getting Started
+![test](./README/comparison.jpg)
 
-### Prerequisites
-**Flutter**
+The background has been entirely coded (see [`header_painter.dart`](https://github.com/alessandroaime/Weather/blob/master/lib/header_painter.dart)) except for the deer image, which has been **temporarily** appended using the `Stack` widget rather than painting it.
 
-
-### Installing
-
-**API Key**
-
-Create a file called `api_keys.dart` in `lib/src/api/`
-
-Make a class called `ApiKey` with your openweathermaps API key in it. Get it [here](https://openweathermap.org/api)
-
-eg:
-  ```
-  class ApiKey {
-    static const OPEN_WEATHER_MAP = 'your_key';
-  }
-  ```
-
-
-
-
-## Acknowledgments
-
-* [Weather Icon Pack](https://erikflowers.github.io/weather-icons/)
+Enjoy it!
