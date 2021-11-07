@@ -41,12 +41,12 @@ jobs:
     - run: flutter pub get
     # - run: flutter test
     - run: flutter build ios --release --no-codesign
-    - name: Upload Artifact
-      continue-on-error: true
-      uses: actions/upload-artifact@master
-      with:
-        name: ios.app
-        path: build/ios/iphoneos/Runner.app
+    # - name: Upload Artifact
+    #   continue-on-error: true
+    #   uses: actions/upload-artifact@master
+    #   with:
+    #     name: ios.app
+    #     path: build/ios/iphoneos/Runner.app
 
   windows:
     runs-on: windows-latest
