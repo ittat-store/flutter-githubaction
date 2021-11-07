@@ -17,9 +17,9 @@ jobs:
     - run: flutter doctor
     # - run: flutter test
     # - run: flutter build apk
-    - uses: actions/checkout@v2
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
+#     - uses: actions/checkout@v2
+#     - name: Setup tmate session
+#       uses: mxschmitt/action-tmate@v3
     - run: flutter build apk --debug --target-platform android-arm,android-arm64 --split-per-abi
     - run: tree build/app/outputs/apk
     - name: Upload Artifact
