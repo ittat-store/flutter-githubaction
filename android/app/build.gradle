@@ -40,16 +40,16 @@ android {
         versionName flutterVersionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-    Properties props = new Properties()
-    props.load(new FileInputStream(file("../signing.properties")))
-    signingConfigs {
-        release {
-            storeFile file(props['KEYSTORE_FILE'])
-            storePassword props['KEYSTORE_PASSWORD']
-            keyAlias props['KEY_ALIAS']
-            keyPassword props['KEY_PASSWORD']
-        }
-    }
+    // Properties props = new Properties()
+    // props.load(new FileInputStream(file("../signing.properties")))
+    // signingConfigs {
+    //     release {
+    //         storeFile file(props['KEYSTORE_FILE'])
+    //         storePassword props['KEYSTORE_PASSWORD']
+    //         keyAlias props['KEY_ALIAS']
+    //         keyPassword props['KEY_PASSWORD']
+    //     }
+    // }
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.
