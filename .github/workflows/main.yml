@@ -28,7 +28,14 @@ jobs:
         name: app-release.apk
         path: build/app/outputs/flutter-apk/app-release.apk
     - run: flutter build web
-    - run: sudo apt-get install libgtk-3-0 libblkid1 liblzma5
+    - run: ls /build/web
+    - name: Upload Artifact
+      continue-on-error: true
+      uses: actions/upload-artifact@master
+      with:
+        name: web.zip
+        path: build/web
+    # - run: sudo apt-get install libgtk-3-0 libblkid1 liblzma5
 #     - run: flutter build linux --release
 
   build:
