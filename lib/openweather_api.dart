@@ -47,7 +47,7 @@ class OpenWeatherAPI {
 
 class WordOnlineAPI {
 
-  final String baseurl = 'https://cdn.jsdelivr.net/gh/lyc8503/baicizhan-word-meaning-API/data';
+  final String baseurl = 'cdn.jsdelivr.net/gh/lyc8503/baicizhan-word-meaning-API/data';
   final String list = '/list.json';
 
   Future<Map<String, dynamic>> _getWordList() async {
